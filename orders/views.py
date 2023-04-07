@@ -1,3 +1,5 @@
 from django.shortcuts import render
 
-# Create your views here.
+def orders_page(reguest):
+    return render(reguest, "index.html")
+
