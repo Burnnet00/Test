@@ -1,5 +1,7 @@
 from django.shortcuts import render
 
-def orders_page(reguest):
-    return render(reguest, "index.html")
+from orders.models import SalesOrder
 
+
+def orders_page(reguest):
+    return render(reguest, "index.html", {'orders' : SalesOrder.objects.all()})
