@@ -11,3 +11,6 @@ def orders_page(reguest):
 class OrderView(ModelViewSet):
     queryset = SalesOrder.objects.all()
     serializer_class = OrderSerializer
+
+def orders_app(reguest):
+    return render(reguest, "main_app.html")
